@@ -4,8 +4,8 @@
     <div class="col" v-for="flashcard in flashcards" :key="flashcard.id">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Hallo</h5>
-          <p class="card-text">zurück</p>
+          <h5 class="card-title">{{flashcard.question}}</h5>
+          <p class="card-text">{{flashcard.options}}</p>
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@ export default {
       redirect: 'follow'
     }
 
-    fetch('https://webtech-brightideas.herokuapp.com/api/v1/flashcards', requestOptions)
+    fetch('http://localhost:8080/api/v1/flashcards', requestOptions)
       .then(response => response.json())
       .then(result => result.forEach(thing => {
         this.flashcards.push(thing)
