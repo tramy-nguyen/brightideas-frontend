@@ -14,7 +14,8 @@
 
 <script>
 export default {
-  name: 'FlashcardItem',
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: 'flashcards',
   data () {
     return {
       flashcards: []
@@ -29,8 +30,8 @@ export default {
 
     fetch(endpoint, requestOptions)
       .then(response => response.json())
-      .then(result => result.forEach(thing => {
-        this.flashcards.push(thing)
+      .then(result => result.forEach(flashcard => {
+        this.flashcards.push(flashcard)
       }))
       .catch(error => console.log('error', error))
   }

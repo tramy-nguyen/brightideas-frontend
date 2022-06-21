@@ -9,7 +9,7 @@
         <div class="navbar-nav">
           <router-link class="nav-link" to="/">HomeView</router-link>
           <router-link class="nav-link" to="/about">AboutView</router-link>
-          <router-link class="nav-link" to="/flashcard-item">Flashcard</router-link>
+          <router-link class="nav-link" to="/flashcards">Flashcard</router-link>
         </div>
       </div>
     </div>

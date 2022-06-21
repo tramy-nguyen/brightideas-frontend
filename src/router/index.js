@@ -15,8 +15,8 @@ const routes = [
     component: AboutView
   },
   {
-    path: '/flashcard-item',
-    name: 'flashcard-item',
+    path: '/flashcards',
+    name: 'flashcards',
     component: FlashcardItem
   }
 ]
