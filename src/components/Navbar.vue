@@ -7,9 +7,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <router-link class="nav-link" to="/">HomeView</router-link>
-          <router-link class="nav-link" to="/about">AboutView</router-link>
-          <router-link class="nav-link" to="/flashcards">Flashcard</router-link>
+          <router-link class="nav-link" to="/">Home</router-link>
+          <router-link class="nav-link" to="/categories">Category</router-link>
+          <router-link class="nav-link" to="/create-flashcards">Create-Flashcard</router-link>
         </div>
       </div>
     </div>

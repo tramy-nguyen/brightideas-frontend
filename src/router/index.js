@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue'
+import CategoryItem from '../views/CategoryItem'
 import FlashcardItem from '../views/FlashcardItem.vue'
 
 const routes = [
@@ -10,13 +10,13 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-    component: AboutView
+    path: '/categories',
+    name: 'categories',
+    component: CategoryItem
   },
   {
-    path: '/flashcards',
-    name: 'flashcards',
+    path: '/create-flashcards',
+    name: 'create-flashcards',
     component: FlashcardItem
   }
 ]
