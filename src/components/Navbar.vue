@@ -10,6 +10,8 @@
           <router-link class="nav-link" to="/">Home</router-link>
           <router-link class="nav-link" to="/categories">Category</router-link>
           <router-link class="nav-link" to="/create-flashcards">Create-Flashcard</router-link>
+          <router-link class="nav-link" to="/sets">Sets</router-link>
+          <router-link class="nav-link" to="/all-flashcards">All-Flashcards</router-link>
         </div>
       </div>
     </div>

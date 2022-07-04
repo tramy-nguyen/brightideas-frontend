@@ -1,19 +1,24 @@
 <template>
       <form class="text-start">
         <div class="row">
-          <div class="col">
+          <div class="col, text-bg-dark p-3">
             <label for="title" class="form-label">title</label>
             <input type="text" class="form-control" id="title" v-model="title" required>
           </div>
-          <div class="col">
+          <div class="col, text-bg-dark p-3">
             <label for="description" class="form-label">description</label>
             <input type="text" class="form-control" id="description" v-model="description" required>
           </div>
-          <div class="col">
-            <label for="subject" class="form-label">subject</label>
-            <input type="text" class="form-control" id="subject" v-model="subject" required>
+          <div class="col, text-bg-dark p-3">
+            <label class="form-label">subject</label>
+            <select class="form-select" aria-label="Default select example" v-model="subject" required>
+              <option selected>Choose Subject</option>
+              <option value="Biology">Biology</option>
+              <option value="Mathematics">Mathematics</option>
+              <option value="Art">Art</option>
+            </select>
           </div>
-          <button type="button" class="btn btn-outline-success">Create Set</button>
+          <submit type="submit" class="btn btn-outline-success" @click="createSet">Create Set</submit>
           <button type="button" class="btn btn-outline-danger">Reset Set</button>
         </div>
       </form>
@@ -30,7 +35,7 @@ export default {
     }
   },
   methods: {
-    createFlashcard () {
+    createSet () {
       console.log(this.title)
       console.log(this.description)
       console.log(this.subject)

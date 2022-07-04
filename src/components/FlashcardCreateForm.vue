@@ -1,5 +1,5 @@
 <template>
-  <button class="btn btn-success sticky-button" data-bs-toggle="offcanvas" data-bs-target="#flashcards-create-offcanvas" aria-controls="#flashcards-create-offcanvas">Create
+  <button class="btn btn-success sticky-button" data-bs-toggle="offcanvas" data-bs-target="#flashcards-create-offcanvas" aria-controls="#flashcards-create-offcanvas">Create Flashcard
   <i class="bi bi-flashcard-plus-fill"></i>
   </button>
   <div class="offcanvas offcanvas-end" tabindex="-1" id="flashcards-create-offcanvas" aria-labelledby="offcanvas-label">
@@ -26,7 +26,7 @@
             <label for="setId" class="form-label">setID</label>
             <input type="Long" class="form-control" id="setID" v-model="setId" required>
           </div>
-          <button type="button" class="btn btn-outline-success">Create a Flashcard</button>
+          <submit type="submit" class="btn btn-outline-success" @click="createFlashcard">Create a Flashcard</submit>
           <button type="button" class="btn btn-outline-danger">Reset a Flashcard</button>
         </div>
       </form>

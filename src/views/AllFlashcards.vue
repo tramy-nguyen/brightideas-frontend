@@ -1,20 +1,18 @@
 <template>
-  <h1>Welcome to create a Flashcard</h1>
-        <flashcard-create-form></flashcard-create-form>
-        <set-create-form></set-create-form>
-  <img src="https://t1.kakaocdn.net/friends/prod/brand/202108_type1_thumb_pc.jpg" class="img-fluid" alt="img1">
+  <h1>Welcome to Flashcards</h1>
+  <div class="container-fluid">
+    <flashcard-list :flashcards="this.flashcards" ></flashcard-list>
+  </div>
 </template>
 
 <script>
-import FlashcardCreateForm from '@/components/FlashcardCreateForm'
-import SetCreateForm from '@/components/SetCreateForm'
+import FlashcardList from '@/components/FlashcardList'
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: 'flashcards',
   components: {
-    FlashcardCreateForm,
-    SetCreateForm
+    FlashcardList
   },
   data () {
     return {
