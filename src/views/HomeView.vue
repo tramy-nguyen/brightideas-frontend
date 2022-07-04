@@ -32,7 +32,6 @@ h1{
   font-size: 200%;
 }
 h2{
-  font-size: small;
   font-weight: lighter;
 }
 p{
