@@ -79,5 +79,9 @@ body{
   border-radius: 10px;
   justify-content: center;
 }
-
+.card{
+  margin-top: auto;
+  margin-bottom: auto;
+  position: relative;
+}
 </style>

@@ -58,7 +58,7 @@ body{
   background: linear-gradient(#f8da61, #90EE90) ;
   color: black;
   font-family: monospace;
-  font-size: 25px;
+  font-size: 20px;
   border-radius: 10px;
   justify-content: center;
 }
@@ -69,7 +69,7 @@ body{
   transform: rotateY(180deg);
   text-align: center;
   font-family: monospace;
-  font-size: 25px;
+  font-size: 20px;
   border-radius: 10px;
   justify-content: center;
 }

@@ -43,7 +43,7 @@ export default {
   computed: {
     filteredFlashcards: function () {
       return this.flashcards.filter((flashcard) => {
-        return flashcard.question.toLowerCase().match(this.search.toLowerCase())
+        return flashcard.setId.toString().match(this.search.toLowerCase())
       })
     }
   }
@@ -56,5 +56,13 @@ h1{
 }
 p{
   font-family: monospace;
+}
+input[type=text] {
+  transition: width 0.4s ease-in-out;
+  background-position: 10px 10px;
+}
+
+input[type=text]:focus {
+  width: 100%;
 }
 </style>
