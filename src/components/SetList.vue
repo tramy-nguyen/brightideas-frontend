@@ -1,10 +1,16 @@
 <template>
-$END$
+
 </template>
 
 <script>
 export default {
-name: "SetList"
+  name: 'SetList',
+  props: {
+    sets: {
+      type: Array,
+      required: true
+    }
+  }
 }
 </script>
 
