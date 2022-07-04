@@ -1,8 +1,9 @@
 <template>
   <h1>Welcome to create a Flashcard</h1>
-        <flashcard-create-form></flashcard-create-form>
-        <set-create-form></set-create-form>
-  <img src="https://t1.kakaocdn.net/friends/prod/brand/202108_type1_thumb_pc.jpg" class="img-fluid" alt="img1">
+  <body>
+  <flashcard-create-form></flashcard-create-form>
+  <set-create-form></set-create-form>
+  </body>
 </template>
 
 <script>

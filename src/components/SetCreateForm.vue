@@ -16,8 +16,18 @@
               <option value="Biology">Biology</option>
               <option value="Mathematics">Mathematics</option>
               <option value="Art">Art</option>
+              <option value="German">German</option>
+              <option value="English">English</option>
+              <option value="Chemistry">Chemistry</option>
+              <option value="ComputerScience">ComputerScience</option>
+              <option value="Physics">Physics</option>
+              <option value="Economics">Economics</option>
+              <option value="SocialStudies">SocialStudies</option>
+              <option value="ForeignL">ForeignLanguages</option>
+              <option value="Geography">Geography</option>
             </select>
           </div>
+          <img src="https://t1.kakaocdn.net/friends/prod/brand/202108_type1_thumb_pc.jpg" class="img-fluid" alt="img1">
           <submit type="submit" class="btn btn-outline-success" @click="createSet">Create Set</submit>
           <button type="button" class="btn btn-outline-danger">Reset Set</button>
         </div>
@@ -66,5 +76,15 @@ export default {
 </script>
 
 <style scoped>
+input[type=text]:focus {
+  border: 3px solid #FFD700;
+}
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #FFD700;
+}
 
 </style>

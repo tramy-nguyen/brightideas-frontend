@@ -1,8 +1,8 @@
 <template>
   <div class="container-fluid">
-    <set-list :sets="this.sets" ></set-list>
+    <input type ="text" v-model="search" placeholder ="Search for Sets..."/>
+    <set-list :sets="this.filteredSets" ></set-list>
   </div>
-  <img src="https://t1.kakaocdn.net/friends/prod/brand/202108_type1_thumb_pc.jpg" class="img-fluid" alt="img1">
 </template>
 
 <script>
@@ -16,7 +16,8 @@ export default {
   },
   data () {
     return {
-      sets: []
+      sets: [],
+      search: ''
     }
   },
   mounted () {
@@ -32,11 +33,25 @@ export default {
         this.sets.push(set)
       }))
       .catch(error => console.log('error', error))
+  },
+  computed: {
+    filteredSets: function () {
+      return this.sets.filter((set) => {
+        return set.title.match(this.search)
+      })
+    }
   }
 }
 
 </script>
 
 <style scoped>
+input[type=text] {
+  transition: width 0.4s ease-in-out;
+  background-position: 10px 10px;
+}
 
+input[type=text]:focus {
+  width: 100%;
+}
 </style>

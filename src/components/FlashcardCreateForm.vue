@@ -26,10 +26,10 @@
             <label for="setId" class="form-label">setID</label>
             <input type="Long" class="form-control" id="setID" v-model="setId" required>
           </div>
-          <submit type="submit" class="btn btn-outline-success" @click="createFlashcard">Create a Flashcard</submit>
-          <button type="button" class="btn btn-outline-danger">Reset a Flashcard</button>
         </div>
       </form>
+      <submit type="submit" class="btn btn-outline-success" @click="createFlashcard">Create a Flashcard</submit>
+      <button type="button" class="btn btn-outline-danger">Reset a Flashcard</button>
     </div>
   </div>
 </template>
@@ -85,5 +85,4 @@ export default {
   padding: 10px 15px;
   border-radius: 30px
 }
-
 </style>
