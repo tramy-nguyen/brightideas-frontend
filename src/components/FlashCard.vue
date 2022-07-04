@@ -2,7 +2,7 @@
   <div class="flip-card">
     <div class="flip-card-inner">
       <h5 class="flip-card-front">{{flashcard.question}}</h5>
-      <p class="flip-card-back">{{flashcard.answer}} {{flashcard.setId}}</p>
+      <p class="flip-card-back">{{flashcard.answer}}</p>
     </div>
   </div>
 </template>
