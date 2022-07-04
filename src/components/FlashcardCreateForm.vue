@@ -10,26 +10,25 @@
     <div class="offcanvas-body">
       <form class="text-start">
         <div class="row">
-          <div class="col">
+          <div class="col, text-bg-light p-3">
             <label for="question" class="form-label">question</label>
             <input type="text" class="form-control" id="question" v-model="question" required>
           </div>
-          <div class="col">
+          <div class="col, text-bg-light p-3">
             <label for="answer" class="form-label">answer</label>
             <input type="text" class="form-control" id="answer" v-model="answer" required>
           </div>
-          <div class="col">
+          <div class="col, text-bg-light p-3">
             <label for="category" class="form-label">category</label>
             <input type="text" class="form-control" id="category" v-model="category" required>
           </div>
-          <div class="col">
+          <div class="col, text-bg-light p-3">
             <label for="setId" class="form-label">setID</label>
             <input type="Long" class="form-control" id="setID" v-model="setId" required>
           </div>
         </div>
       </form>
       <submit type="submit" class="btn btn-outline-success" @click="createFlashcard">Create a Flashcard</submit>
-      <button type="button" class="btn btn-outline-danger">Reset a Flashcard</button>
     </div>
   </div>
 </template>
@@ -84,5 +83,21 @@ export default {
   right: 20px;
   padding: 10px 15px;
   border-radius: 30px
+}
+h5{
+  font-family: monospace;
+  font-weight: bold;
+}
+input[type=text] {
+  transition: width 0.4s ease-in-out;
+  background-position: 10px 10px;
+  font-family: monospace;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+label{
+  font-family: monospace;
 }
 </style>

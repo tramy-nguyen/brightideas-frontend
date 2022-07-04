@@ -1,8 +1,14 @@
 <template>
-  <h1>Welcome to Flashcards</h1>
+  <h1>Flashcards Overview</h1>
+  <p>Don‘t stress out!
+    Just practice a lot and you will be ready for your next exam. These small steps will feel like a success and you will be happy to keep going.
+  </p>
+  <input type ="text" v-model="search" placeholder ="search flashcards with Set ID"/>
+  <body>
   <div class="container-fluid">
-    <flashcard-list :flashcards="this.flashcards" ></flashcard-list>
+    <flashcard-list :flashcards="this.filteredFlashcards" ></flashcard-list>
   </div>
+  </body>
 </template>
 
 <script>
@@ -16,7 +22,8 @@ export default {
   },
   data () {
     return {
-      flashcards: []
+      flashcards: [],
+      search: ''
     }
   },
   mounted () {
@@ -32,11 +39,22 @@ export default {
         this.flashcards.push(flashcard)
       }))
       .catch(error => console.log('error', error))
+  },
+  computed: {
+    filteredFlashcards: function () {
+      return this.flashcards.filter((flashcard) => {
+        return flashcard.question.toLowerCase().match(this.search.toLowerCase())
+      })
+    }
   }
 }
 </script>
 
 <style scoped>
-font-family: monospace
-
+h1{
+  font-family: monospace;
+}
+p{
+  font-family: monospace;
+}
 </style>

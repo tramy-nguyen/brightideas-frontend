@@ -1,15 +1,15 @@
 <template>
       <form class="text-start">
         <div class="row">
-          <div class="col, text-bg-dark p-3">
+          <div class="col">
             <label for="title" class="form-label">title</label>
             <input type="text" class="form-control" id="title" v-model="title" required>
           </div>
-          <div class="col, text-bg-dark p-3">
+          <div class="col">
             <label for="description" class="form-label">description</label>
             <input type="text" class="form-control" id="description" v-model="description" required>
           </div>
-          <div class="col, text-bg-dark p-3">
+          <div class="col">
             <label class="form-label">subject</label>
             <select class="form-select" aria-label="Default select example" v-model="subject" required>
               <option selected>Choose Subject</option>
@@ -29,7 +29,6 @@
           </div>
           <img src="https://t1.kakaocdn.net/friends/prod/brand/202108_type1_thumb_pc.jpg" class="img-fluid" alt="img1">
           <submit type="submit" class="btn btn-outline-success" @click="createSet">Create Set</submit>
-          <button type="button" class="btn btn-outline-danger">Reset Set</button>
         </div>
       </form>
 </template>
@@ -78,13 +77,20 @@ export default {
 <style scoped>
 input[type=text]:focus {
   border: 3px solid #FFD700;
+  font-family: monospace;
 }
 select {
   width: 100%;
+  height: 40%;
   padding: 16px 20px;
   border: none;
   border-radius: 4px;
   background-color: #FFD700;
 }
-
+label{
+  font-family: monospace;
+  background-color: #FFD700;
+  border-radius: 4px;
+  font-weight: bold;
+}
 </style>

@@ -37,7 +37,7 @@ export default {
   computed: {
     filteredSets: function () {
       return this.sets.filter((set) => {
-        return set.title.match(this.search)
+        return set.title.toLowerCase().match(this.search.toLowerCase())
       })
     }
   }

@@ -2,20 +2,20 @@
   <body>
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col" v-for="flashcard in flashcards" :key="flashcard.id">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <h5 class="flip-card-front">{{flashcard.question}}</h5>
-          <p class="flip-card-back">{{flashcard.answer}}</p>
-        </div>
-      </div>
+      <flashCard :flashcard="flashcard"></flashCard>
     </div>
   </div>
   </body>
 </template>
 
 <script>
+
+import FlashCard from '@/components/FlashCard'
 export default {
   name: 'FlashcardList',
+  components: {
+    FlashCard
+  },
   props: {
     flashcards: {
       type: Array,
@@ -61,7 +61,7 @@ body{
 }
 
 .flip-card-front {
-  background: linear-gradient(#f8da61, #ff5acd) ;
+  background: linear-gradient(#f8da61, #90EE90) ;
   color: black;
   font-family: monospace;
   font-size: 25px;
@@ -70,7 +70,7 @@ body{
 }
 
 .flip-card-back {
-  background: linear-gradient(#08aeea, #2af598);
+  background: linear-gradient(#08aeea, #90EE90);
   color: black;
   transform: rotateY(180deg);
   text-align: center;

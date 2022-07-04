@@ -4,7 +4,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">{{set.title}}</h5>
-          <p class="card-text">{{set.description}}</p>
+          <p class="card-text">{{set.description}} {{set.id}}</p>
         </div>
       </div>
     </div>
@@ -23,5 +23,10 @@ export default {
 </script>
 
 <style scoped>
-
+h5{
+  font-weight: bold;
+}
+.card{
+  background-color: #FFD700;
+}
 </style>
